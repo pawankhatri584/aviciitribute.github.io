@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+p{
+    font-size: 1.4rem;
+    color: white;
+    text-align: left;
+    line-height: 2rem;
+}
+
+/* Header Section */
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    height: auto;
+    max-width: 1250px;
+}
+
+#header .header{
+    min-height: 8vh;
+}
+
+#header .logo{
+    
+    margin-top: 25px;
+    margin-left: 100px;
+}
+#header p{
+  color: transparent;
+}
+
+#image{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.audio-container{
+    position: fixed;
+    z-index: 1001;
+    right: 0;
+    top: 0;
+    height: auto;
+    max-width: 1250px;
+    margin-top: 15px;
+    margin-right: 100px;
+}
+
+
+/* End of Header Section */
+
+/* Hero Section */
+#hero{
+    background-image: url(https://avicii.com/wp-content/themes/aviciiboard/assets/img/Tim%20Studio2264_e.jpg);
+    background-size: cover;
+    background-position: top left;
+    position: relative;
+}
+
+#hero .hero{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 120px 30px;
+    justify-content: flex-end;
+}
+
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    color: transparent;
+    margin-top: 150px;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+
+#hero h4 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 2.5s;
+}
+
+#hero h4{
+    display: block;
+    width: fit-content;
+    font-size: 2rem;
+    margin-top: 20px;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 2.5s;
+}
+
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: transparent;
+    background-color: transparent;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 40px;
+    transition: .3 ease background-color;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 3s;
+}
+
+#hero .cta:hover {
+    background-color:rgb(161, 12, 42);
+}
+/* End Hero Section */
+
+/* About Section */
+#about{
+
+}
+
+#about .about{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 80px;
+    padding-bottom: 50px;
+}
+
+#about .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+#about .section-title span{
+    color: brown;
+}
+
+#about .info-para{
+    font-size: 1.4rem;
+    margin-top: 15px;
+    line-height: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .05rem;
+}
+
+#about .timeline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#about .timeline-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin: 10px 5%;
+    position: relative;
+}
+
+#about .timeline-item h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#about .timeline-item p{
+    font-size: 1.4rem;
+    color: white;
+    text-align: left;
+    line-height: 2rem;
+}
+
+#tribute-link{
+  text-align: center;
+}
+/* End of About Section */
+
+
+/* Keyframes */
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {
+        opacity: 1;
+        color: white;
+        border: 2px solid whitesmoke;
+    } 
+
+ } 
+/* End Keyframes */
